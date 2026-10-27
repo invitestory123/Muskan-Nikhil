@@ -1,0 +1,119 @@
+/**
+ * Wedding details for Muskan Chandan & Nikhil Rangwani
+ */
+
+export const invitation = {
+  couple: {
+    bride: "Muskan Chandan",
+    brideHindi: "मुस्कान चन्दन",
+    brideShort: "Muskan",
+    groom: "Nikhil Rangwani",
+    groomHindi: "निखिल रंगवानी",
+    groomShort: "Nikhil",
+    monogramHindi: "मन",
+    hashtag: "#MuskanWedsNikhil",
+    logoImage: "/images/logo-mn.jpg",
+  },
+  invite: {
+    invocation: "॥ श्री गणेशाय नमः ॥",
+    kicker: "Together with their families",
+    kickerHindi: "॥ सपरिवार सादर आमंत्रित ॥",
+    line: "cordially invite you to celebrate the wedding ceremonies of their beloved",
+    lineHindi: "अपने प्रियजनों के शुभ विवाह उत्सव में आपको सप्रेम आमंत्रित करते हैं",
+  },
+  music: {
+    title: "Ishq Hai",
+    artist: "Anurag Saikia (Mismatched S3)",
+    youtubeId: "xgYQacGP-ZE",
+    youtubeUrl: "https://youtu.be/xgYQacGP-ZE?si=yiqcSPYnM6azMCCr",
+    embedUrl: "https://www.youtube-nocookie.com/embed/xgYQacGP-ZE?autoplay=1&enablejsapi=1&loop=1&playlist=xgYQacGP-ZE",
+  },
+  mainWedding: {
+    title: "The Wedding of Muskan & Nikhil",
+    titleHindi: "शुभ विवाह संस्कार",
+    dateLabel: "10 . 02 . 2026",
+    datesRangeLabel: "6th — 10th February",
+    startsAt: "2026-02-10T17:00:00+05:30",
+  },
+  events: [
+    {
+      id: "sagan-chowki",
+      dateNumber: "06",
+      month: "FEBRUARY",
+      day: "Friday",
+      titleHindi: "सगन एवं माता की चौकी",
+      titleEnglish: "Sagan & Mata Ki Chowki",
+      colorTag: "Devotion & Auspicious Beginnings",
+      timings: [
+        { label: "Sagan Ceremony", labelHindi: "सगन समारोह", time: "4:00 PM onwards" },
+        { label: "Mata Ki Chowki", labelHindi: "माता की चौकी", time: "6:00 PM – 8:30 PM" },
+        { label: "Dinner", labelHindi: "प्रीतिभोज", time: "8:30 PM onwards" },
+      ],
+      venue: {
+        name: "Ballroom, Club Zion",
+        complex: "Pioneer Presidia",
+        address: "CRPF Road, Sector-62, Gurgaon, Haryana",
+        mapUrl: "https://maps.app.goo.gl/V4kAUEtFhcqSvNYH6?g_st=ic",
+      },
+      dressCode: "Traditional / Ethnic Elegance",
+      themeColor: "from-amber-900/60 to-red-950/80",
+    },
+    {
+      id: "mehndi-sangeet",
+      dateNumber: "08",
+      month: "FEBRUARY",
+      day: "Sunday",
+      titleHindi: "मेहंदी एवं संगीत कॉकटेल",
+      titleEnglish: "Mehndi & Sangeet Cocktail",
+      colorTag: "Colors, Rhythm & Celebration",
+      timings: [
+        { label: "Celebrations", labelHindi: "संगीत एवं मेहंदी उत्सव", time: "5:30 PM onwards" },
+        { label: "Cocktails & Dinner", labelHindi: "कॉकटेल एवं रात्रिभोज", time: "Followed by Dinner" },
+      ],
+      venue: {
+        name: "DLF Club 5",
+        complex: "Phase-5",
+        address: "Sector-53, Gurgaon, Haryana",
+        mapUrl: "https://maps.app.goo.gl/zorxNMn4qPNTNBek7?g_st=ic",
+      },
+      dressCode: "Glamorous Cocktail / Indo-Western",
+      themeColor: "from-emerald-950/70 to-teal-950/80",
+    },
+    {
+      id: "wedding-reception",
+      dateNumber: "10",
+      month: "FEBRUARY",
+      day: "Tuesday",
+      titleHindi: "शुभ विवाह, फेरे एवं रिसेप्शन",
+      titleEnglish: "Wedding Pheras & Reception",
+      colorTag: "The Sacred Vows & Grand Evening",
+      timings: [
+        { label: "Baraat", labelHindi: "शुभ बारात आगमन", time: "5:00 PM" },
+        { label: "Sundowner Pheras", labelHindi: "सूर्यास्त फेरे (पाणिग्रहण संस्कार)", time: "6:00 PM – 8:00 PM" },
+        { label: "Grand Reception", labelHindi: "रिसेप्शन एवं मंगल उत्सव", time: "8:00 PM onwards" },
+      ],
+      venue: {
+        name: "Tulip Ballroom",
+        complex: "Crowne Plaza Hotel",
+        address: "Sector-29, Gurgaon, Haryana",
+        mapUrl: "https://maps.app.goo.gl/bkexxC1dJsp6aVrn9?g_st=ic",
+      },
+      dressCode: "Royal Festive / Traditional Wedding Finery",
+      themeColor: "from-rose-950/80 to-amber-950/80",
+    },
+  ],
+  blessing: {
+    shloka: "माङ्गल्यं तन्तुनानेन लोकजीवनहेतुना। कण्ठे बध्नामि सुभगे सञ्जीव शरदः शतम्॥",
+    translation: "This sacred thread, auspicious and the cause of my life, I tie around your neck, O beloved. May you live happily with me for a hundred autumns.",
+    subtext: "Two souls, two families, bound by eternal love, sacred vows, and countless blessings.",
+  },
+  meta: {
+    title: "Muskan & Nikhil — Wedding Invitation | मुस्कान एवं निखिल",
+    description: "Muskan Chandan and Nikhil Rangwani invite you to celebrate their wedding ceremonies from 6th to 10th February in Gurgaon.",
+    url: "https://muskan-nikhil.wedding",
+    image: "/images/logo-mn.jpg",
+    siteName: "Muskan & Nikhil Wedding",
+  },
+} as const;
+
+export type Invitation = typeof invitation;

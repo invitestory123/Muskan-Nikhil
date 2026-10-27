@@ -1,0 +1,138 @@
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+const heroArch = "https://media.invitestory.in/sage-parchment/src/assets/hero-arch.jpg";
+import { invitation } from "@/config/invitation";
+import { AuroraBackdrop } from "./AuroraBackdrop";
+import { useOpened } from "./OpenGate";
+
+export function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
+  const fade = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
+  const { couple, invite, mainWedding } = invitation;
+  const opened = useOpened();
+
+  return (
+    <section
+      ref={ref}
+      className="relative flex min-h-[100svh] flex-col items-center justify-between overflow-hidden bg-parchment"
+    >
+      <AuroraBackdrop />
+
+      <motion.div style={{ y: imgY }} className="absolute -top-10 inset-x-0 bottom-0">
+        <img
+          src={heroArch}
+          alt="Illustrated Mughal arch with golden flowers"
+          width={1024}
+          height={1536}
+          className="h-full w-full object-cover object-top opacity-85"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-pine/25 via-transparent via-40% to-parchment" />
+      </motion.div>
+
+      {/* Fixed bottom gradient to guarantee seamless transition to next section */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-72 bg-gradient-to-t from-parchment via-parchment/95 via-60% to-transparent" />
+
+      <motion.div
+        style={{ y: textY }}
+        className="relative z-20 mt-auto w-full px-6 pt-20 pb-8 text-center"
+      >
+        {/* Sacred Invocation */}
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          animate={opened ? { opacity: 1, y: 0 } : false}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="font-hindi text-base tracking-[0.25em] text-gold font-semibold"
+        >
+          {invite.invocation}
+        </motion.p>
+
+        {/* Monogram Seal */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={opened ? { opacity: 1, scale: 1 } : false}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="mx-auto mt-4 size-20 overflow-hidden rounded-full border-2 border-gold/70 bg-[#faf6ef] p-1 shadow-lg"
+        >
+          <img
+            src={couple.logoImage}
+            alt="Muskan and Nikhil Monogram"
+            className="size-full rounded-full object-cover"
+          />
+        </motion.div>
+
+        {/* Hindi Names */}
+        <motion.h2
+          initial={{ opacity: 0, y: 18 }}
+          animate={opened ? { opacity: 1, y: 0 } : false}
+          transition={{ duration: 1.2, delay: 0.4 }}
+          className="mx-auto mt-4 font-hindi text-3xl font-bold text-amber-950 sm:text-4xl"
+        >
+          {couple.brideHindi}
+          <span className="mx-2 text-gold font-serif text-2xl">संग</span>
+          {couple.groomHindi}
+        </motion.h2>
+
+        {/* English Names */}
+        <motion.h1
+          initial={{ opacity: 0, y: 24, letterSpacing: "0.3em" }}
+          animate={opened ? { opacity: 1, y: 0, letterSpacing: "0.14em" } : false}
+          transition={{ duration: 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="mx-auto mt-2 max-w-md text-3xl leading-tight font-light text-pine uppercase sm:text-4xl"
+        >
+          {couple.brideShort}
+          <span className="mx-3 inline-block font-display text-2xl lowercase italic text-gold">
+            and
+          </span>
+          {couple.groomShort}
+        </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, scaleX: 0.4 }}
+          animate={opened ? { opacity: 1, scaleX: 1 } : false}
+          transition={{ duration: 1.2, delay: 0.7 }}
+          className="mx-auto mt-5 w-44 gold-rule"
+        />
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={opened ? { opacity: 1 } : false}
+          transition={{ duration: 1, delay: 0.9 }}
+          className="mt-5 text-xs text-ink/80 max-w-sm mx-auto tracking-wide"
+        >
+          {invite.line}
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={opened ? { opacity: 1 } : false}
+          transition={{ duration: 1, delay: 1.05 }}
+          className="mt-3 font-display text-2xl tracking-[0.2em] text-gold font-semibold"
+        >
+          {mainWedding.datesRangeLabel}
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={opened ? { opacity: 1 } : false}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="mt-1 text-[0.72rem] tracking-[0.28em] text-ink/70 uppercase"
+        >
+          Gurgaon, Haryana
+        </motion.p>
+      </motion.div>
+
+      <motion.div style={{ opacity: fade }} className="relative z-20 pb-6 text-center">
+        <span className="text-[0.6rem] tracking-[0.3em] text-ink/60 uppercase">scroll</span>
+        <motion.div
+          animate={{ scaleY: [0.2, 1, 0.2], originY: 0 }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          className="mx-auto mt-2 h-8 w-px bg-gold"
+        />
+      </motion.div>
+    </section>
+  );
+}
