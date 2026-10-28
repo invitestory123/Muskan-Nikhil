@@ -1,6 +1,6 @@
 import { invitation } from "@/config/invitation";
 
-const { event, venue } = invitation;
+const wedding = invitation.mainWedding;
 
 function toICSDate(iso: string) {
   return new Date(iso)
@@ -15,12 +15,12 @@ export function buildICS() {
     "VERSION:2.0",
     "PRODID:-//wedding-invite//EN",
     "BEGIN:VEVENT",
-    `UID:${toICSDate(event.startsAt)}-wedding@invite`,
+    `UID:${toICSDate(wedding.startsAt)}-wedding@invite`,
     `DTSTAMP:${toICSDate(new Date().toISOString())}`,
-    `DTSTART:${toICSDate(event.startsAt)}`,
-    `DTEND:${toICSDate(event.endsAt)}`,
-    `SUMMARY:${event.title}`,
-    `LOCATION:${venue.name}, ${venue.address}`,
+    `DTSTART:${toICSDate(wedding.startsAt)}`,
+    `DTEND:${toICSDate(wedding.endsAt)}`,
+    `SUMMARY:${wedding.title}`,
+    `LOCATION:${wedding.venue.name}, ${wedding.venue.address}`,
     `DESCRIPTION:${invitation.invite.line}`,
     "END:VEVENT",
     "END:VCALENDAR",
@@ -33,35 +33,29 @@ export function downloadICS() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "wedding-invitation.ics";
+  a.download = "muskan-nikhil-wedding.ics";
   a.click();
   URL.revokeObjectURL(url);
 }
 
 export function googleCalendarUrl() {
-  const details = `${invitation.invite.kicker} — ${invitation.invite.line}\n\nVenue: ${venue.name}, ${venue.address}\nDress code: ${event.dressCode}\nNote: ${event.note}`;
+  const details = `${invitation.invite.kicker} — ${invitation.invite.line}\n\nVenue: ${wedding.venue.name}, ${wedding.venue.address}\nDress code: ${wedding.dressCode}`;
   const params = new URLSearchParams({
     action: "TEMPLATE",
-    text: event.title,
-    dates: `${toICSDate(event.startsAt)}/${toICSDate(event.endsAt)}`,
+    text: wedding.title,
+    dates: `${toICSDate(wedding.startsAt)}/${toICSDate(wedding.endsAt)}`,
     details,
-    location: `${venue.name}, ${venue.address}`,
+    location: `${wedding.venue.name}, ${wedding.venue.address}`,
   });
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
 }
 
 export function mapsUrl() {
-  if ("url" in venue && venue.url) {
-    return venue.url;
-  }
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.mapsQuery)}`;
+  return wedding.venue.mapUrl;
 }
 
 export function directionsUrl() {
-  if ("url" in venue && venue.url) {
-    return venue.url;
-  }
-  return `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`;
+  return wedding.venue.mapUrl;
 }
 
 export type TimeLeft = {

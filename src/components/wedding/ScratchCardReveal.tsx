@@ -235,15 +235,15 @@ export function ScratchCardReveal() {
                 ॥ शुभ विवाह ॥
               </span>
               <p className="font-display text-2xl tracking-[0.18em] text-amber-100 font-semibold">
-                6th — 10th February
+                10th February 2026
               </p>
               <p className="text-[0.72rem] tracking-[0.25em] text-amber-200/90 uppercase">
                 Gurgaon, Haryana
               </p>
-              <div className="mt-2 flex items-center gap-1.5 text-xs text-amber-300">
-                <Heart className="size-3.5 fill-amber-400 text-amber-400" />
-                <span className="font-display italic">Sagan • Chowki • Sangeet • Pheras</span>
-                <Heart className="size-3.5 fill-amber-400 text-amber-400" />
+              <div className="mt-2 flex items-center justify-center gap-1.5 text-xs text-amber-300 flex-wrap">
+                <Heart className="size-3.5 fill-amber-400 text-amber-400 shrink-0" />
+                <span className="font-display italic">Sagan • Mata Ki Chowki • Sangeet • Pheras</span>
+                <Heart className="size-3.5 fill-amber-400 text-amber-400 shrink-0" />
               </div>
             </div>
 

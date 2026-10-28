@@ -32,8 +32,19 @@ export const invitation = {
     title: "The Wedding of Muskan & Nikhil",
     titleHindi: "शुभ विवाह संस्कार",
     dateLabel: "10 . 02 . 2026",
+    weddingDateFull: "Tuesday, 10th February 2026",
+    weddingDateShort: "10th February 2026",
     datesRangeLabel: "6th — 10th February",
     startsAt: "2026-02-10T17:00:00+05:30",
+    endsAt: "2026-02-10T23:59:00+05:30",
+    muhurthaTiming: "Tuesday, 05:00 PM to 08:00 PM",
+    venue: {
+      name: "Tulip Ballroom, Crowne Plaza Hotel",
+      complex: "Crowne Plaza Hotel",
+      address: "Sector-29, Gurgaon, Haryana",
+      mapUrl: "https://maps.app.goo.gl/bkexxC1dJsp6aVrn9?g_st=ic",
+    },
+    dressCode: "Royal Festive / Traditional Wedding Finery",
   },
   events: [
     {
@@ -41,8 +52,9 @@ export const invitation = {
       dateNumber: "06",
       month: "FEBRUARY",
       day: "Friday",
-      titleHindi: "सगन एवं माता की चौकी",
-      titleEnglish: "Sagan & Mata Ki Chowki",
+      titleHindi: "सगन\nमाता की चौकी",
+      titleEnglish: "Sagan\nMata Ki Chowki",
+      image: "story-1",
       colorTag: "Devotion & Auspicious Beginnings",
       timings: [
         { label: "Sagan Ceremony", labelHindi: "सगन समारोह", time: "4:00 PM onwards" },
@@ -65,6 +77,7 @@ export const invitation = {
       day: "Sunday",
       titleHindi: "मेहंदी एवं संगीत कॉकटेल",
       titleEnglish: "Mehndi & Sangeet Cocktail",
+      image: "story-2",
       colorTag: "Colors, Rhythm & Celebration",
       timings: [
         { label: "Celebrations", labelHindi: "संगीत एवं मेहंदी उत्सव", time: "5:30 PM onwards" },
@@ -86,6 +99,7 @@ export const invitation = {
       day: "Tuesday",
       titleHindi: "शुभ विवाह, फेरे एवं रिसेप्शन",
       titleEnglish: "Wedding Pheras & Reception",
+      image: "story-3",
       colorTag: "The Sacred Vows & Grand Evening",
       timings: [
         { label: "Baraat", labelHindi: "शुभ बारात आगमन", time: "5:00 PM" },

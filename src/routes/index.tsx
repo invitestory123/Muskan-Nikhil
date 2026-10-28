@@ -5,6 +5,7 @@ import { TheRitualDiya } from "@/components/wedding/TheRitualDiya";
 import { ScratchCardReveal } from "@/components/wedding/ScratchCardReveal";
 import { Countdown } from "@/components/wedding/Countdown";
 import { EventSchedule } from "@/components/wedding/EventSchedule";
+import { Details } from "@/components/wedding/Details";
 import { Blessing } from "@/components/wedding/Blessing";
 import { SiteFooter } from "@/components/wedding/SiteFooter";
 import { Petals } from "@/components/wedding/Petals";
@@ -54,6 +55,7 @@ function InvitationPage() {
         <ScratchCardReveal />
         <Countdown />
         <EventSchedule />
+        <Details />
         <Blessing />
         <SiteFooter />
         <Toaster position="top-center" />
