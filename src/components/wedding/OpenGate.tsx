@@ -99,7 +99,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           {invite.kicker}
         </motion.p>
 
-        {/* Golden Monogram "मन" Logo (Image 1) */}
+        {/* Golden Monogram MN Logo */}
         <div className="relative mt-8 flex size-44 items-center justify-center">
           <motion.span
             animate={{ rotate: 360 }}
@@ -128,21 +128,12 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           </div>
         </div>
 
-        {/* Hindi & English Names */}
-        <motion.h3
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, delay: 0.5, ease: EASE }}
-          className="mt-7 font-hindi text-2xl font-bold text-amber-100 sm:text-3xl"
-        >
-          {couple.brideHindi} संग {couple.groomHindi}
-        </motion.h3>
-
+        {/* English Names */}
         <motion.h2
-          initial={{ opacity: 0, y: 16, letterSpacing: "0.4em" }}
-          animate={{ opacity: 1, y: 0, letterSpacing: "0.22em" }}
-          transition={{ duration: 1.5, delay: 0.6, ease: EASE }}
-          className="mt-2 text-lg font-light text-parchment uppercase sm:text-xl"
+          initial={{ opacity: 0, y: 16, letterSpacing: "0.3em" }}
+          animate={{ opacity: 1, y: 0, letterSpacing: "0.18em" }}
+          transition={{ duration: 1.5, delay: 0.5, ease: EASE }}
+          className="mt-6 text-2xl font-light text-parchment uppercase sm:text-3xl font-display"
         >
           {couple.brideShort} &amp; {couple.groomShort}
         </motion.h2>
@@ -150,7 +141,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          transition={{ duration: 1, delay: 0.8 }}
           className="mt-3 font-display text-base tracking-[0.3em] text-gold"
         >
           {mainWedding.datesRangeLabel}
@@ -161,7 +152,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           onClick={onOpen}
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.2 }}
+          transition={{ duration: 1, delay: 1.1 }}
           whileTap={{ scale: 0.96 }}
           className="group relative mt-10 overflow-hidden rounded-full border border-gold/80 px-10 py-3.5 text-[0.65rem] tracking-[0.35em] text-parchment uppercase transition-colors hover:bg-gold/20 shadow-xl"
         >
@@ -170,7 +161,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
             transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
             className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-amber-200/30 to-transparent"
           />
-          <span className="relative font-semibold">Open Invitation • निमंत्रण पत्र</span>
+          <span className="relative font-semibold">Open Invitation</span>
         </motion.button>
       </motion.div>
     </motion.div>

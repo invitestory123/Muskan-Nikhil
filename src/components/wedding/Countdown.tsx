@@ -29,10 +29,10 @@ function calculateTimeLeft(): TimeLeft {
 }
 
 const UNITS = [
-  { key: "days" as const, label: "Days", hindi: "दिन" },
-  { key: "hours" as const, label: "Hours", hindi: "घंटे" },
-  { key: "minutes" as const, label: "Mins", hindi: "मिनट" },
-  { key: "seconds" as const, label: "Secs", hindi: "सेकंड" },
+  { key: "days" as const, label: "Days" },
+  { key: "hours" as const, label: "Hours" },
+  { key: "minutes" as const, label: "Mins" },
+  { key: "seconds" as const, label: "Secs" },
 ];
 
 export function Countdown() {
@@ -47,8 +47,8 @@ export function Countdown() {
   return (
     <section className="relative px-5 py-16 bg-parchment">
       <Reveal className="mx-auto max-w-lg text-center">
-        <p className="font-hindi text-base tracking-[0.2em] text-gold">
-          ॥ उल्टी गिनती ॥
+        <p className="text-[0.68rem] tracking-[0.35em] text-gold uppercase font-medium">
+          The Countdown
         </p>
         <h2 className="mt-1 font-display text-2xl tracking-[0.25em] text-pine uppercase sm:text-3xl">
           {left?.done ? "Today is the Auspicious Day" : "Counting down to the celebrations"}
@@ -56,7 +56,7 @@ export function Countdown() {
         <div className="mx-auto mt-4 w-28 gold-rule" />
 
         <div className="mt-8 grid grid-cols-4 gap-2 sm:gap-4">
-          {UNITS.map(({ key, label, hindi }) => (
+          {UNITS.map(({ key, label }) => (
             <div
               key={key}
               className="relative overflow-hidden rounded-t-[2.2rem] border border-gold/45 bg-parchment-deep/70 px-1 py-5 shadow-[0_10px_30px_-22px_var(--color-ink)]"
@@ -74,11 +74,8 @@ export function Countdown() {
                   {left ? String(left[key]).padStart(2, "0") : "--"}
                 </motion.span>
               </AnimatePresence>
-              <span className="mt-1 block text-[0.6rem] tracking-[0.2em] text-ink/75 font-semibold uppercase">
+              <span className="mt-1.5 block text-[0.65rem] tracking-[0.2em] text-ink/75 font-semibold uppercase">
                 {label}
-              </span>
-              <span className="block font-hindi text-[0.65rem] text-gold">
-                {hindi}
               </span>
             </div>
           ))}

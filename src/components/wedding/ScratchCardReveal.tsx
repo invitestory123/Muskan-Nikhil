@@ -148,14 +148,14 @@ export function ScratchCardReveal() {
       <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(#fde047_1px,transparent_1px)] [background-size:20px_20px]" />
 
       <div className="relative z-10 mx-auto max-w-md">
-        {/* Sacred Invocation */}
+        {/* Invocation / Tagline */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-hindi text-base tracking-[0.25em] text-amber-300 drop-shadow-md"
+          className="text-xs tracking-[0.3em] text-amber-300 drop-shadow-md uppercase font-medium"
         >
-          {invitation.invite.invocation}
+          Celebrating With Love &amp; Blessings
         </motion.p>
 
         {/* Sacred Artwork of Couple's Feet & Golden Lotus (Image 3 style) */}
@@ -192,27 +192,13 @@ export function ScratchCardReveal() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="mt-6 text-[0.68rem] tracking-[0.35em] text-amber-200/90 uppercase"
+          className="mt-6 text-[0.68rem] tracking-[0.35em] text-amber-200/90 uppercase font-medium"
         >
           {invitation.invite.kicker}
         </motion.p>
-        <p className="mt-1 font-hindi text-xs tracking-wider text-amber-300/80">
-          {invitation.invite.kickerHindi}
-        </p>
 
-        {/* Couple Names in Hindi & English */}
+        {/* Couple Names in English */}
         <div className="mt-4">
-          <motion.h3
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-hindi text-3xl tracking-wide text-amber-100 sm:text-4xl"
-          >
-            {invitation.couple.brideHindi}
-            <span className="mx-2 text-amber-300 font-sans text-2xl">संग</span>
-            {invitation.couple.groomHindi}
-          </motion.h3>
-
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -231,8 +217,8 @@ export function ScratchCardReveal() {
           <div className="relative min-h-[170px] overflow-hidden rounded-2xl border-2 border-amber-300/50 bg-[#2d0705] p-6 shadow-2xl">
             {/* The Hidden Content Beneath the Foil */}
             <div className="flex flex-col items-center justify-center space-y-2 py-1 text-center">
-              <span className="font-hindi text-lg tracking-widest text-amber-300">
-                ॥ शुभ विवाह ॥
+              <span className="text-xs tracking-[0.35em] text-amber-300 font-semibold uppercase">
+                THE WEDDING
               </span>
               <p className="font-display text-2xl tracking-[0.18em] text-amber-100 font-semibold">
                 10th February 2026
@@ -294,9 +280,9 @@ export function ScratchCardReveal() {
             <motion.p
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-3 font-hindi text-xs tracking-wider text-amber-300/90"
+              className="mt-3 text-xs tracking-widest text-amber-300/90 uppercase font-medium"
             >
-              ✨ हार्दिक स्वागत एवं अभिनंदन ✨
+              ✨ Warmest Welcome &amp; Heartfelt Greetings ✨
             </motion.p>
           )}
         </div>

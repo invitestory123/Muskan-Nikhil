@@ -122,7 +122,7 @@ export const invitation = {
     subtext: "Two souls, two families, bound by eternal love, sacred vows, and countless blessings.",
   },
   meta: {
-    title: "Muskan & Nikhil — Wedding Invitation | मुस्कान एवं निखिल",
+    title: "Muskan & Nikhil — Wedding Invitation",
     description: "Muskan Chandan and Nikhil Rangwani invite you to celebrate their wedding ceremonies from 6th to 10th February in Gurgaon.",
     url: "https://muskan-nikhil.wedding",
     image: "/images/logo-mn.jpg",

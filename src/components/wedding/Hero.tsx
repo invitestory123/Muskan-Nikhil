@@ -40,14 +40,14 @@ export function Hero() {
         style={{ y: textY }}
         className="relative z-20 mt-auto w-full px-6 pt-20 pb-8 text-center"
       >
-        {/* Sacred Invocation */}
+        {/* Family Kicker */}
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={opened ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 1, delay: 0.2 }}
-          className="font-hindi text-base tracking-[0.25em] text-gold font-semibold"
+          className="text-[0.68rem] tracking-[0.35em] text-gold uppercase font-medium"
         >
-          {invite.invocation}
+          {invite.kicker}
         </motion.p>
 
         {/* Monogram Seal */}
@@ -64,24 +64,12 @@ export function Hero() {
           />
         </motion.div>
 
-        {/* Hindi Names */}
-        <motion.h2
-          initial={{ opacity: 0, y: 18 }}
-          animate={opened ? { opacity: 1, y: 0 } : false}
-          transition={{ duration: 1.2, delay: 0.4 }}
-          className="mx-auto mt-4 font-hindi text-3xl font-bold text-amber-950 sm:text-4xl"
-        >
-          {couple.brideHindi}
-          <span className="mx-2 text-gold font-serif text-2xl">संग</span>
-          {couple.groomHindi}
-        </motion.h2>
-
         {/* English Names */}
         <motion.h1
           initial={{ opacity: 0, y: 24, letterSpacing: "0.3em" }}
           animate={opened ? { opacity: 1, y: 0, letterSpacing: "0.14em" } : false}
-          transition={{ duration: 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mt-2 max-w-md text-3xl leading-tight font-light text-pine uppercase sm:text-4xl"
+          transition={{ duration: 1.4, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          className="mx-auto mt-5 max-w-md text-3xl leading-tight font-light text-pine uppercase sm:text-4xl"
         >
           {couple.brideShort}
           <span className="mx-3 inline-block font-display text-2xl lowercase italic text-gold">

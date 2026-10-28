@@ -32,19 +32,12 @@ export function SiteFooter() {
           />
         </div>
 
-        <p className="mt-4 font-hindi text-2xl font-bold text-amber-950">
-          {couple.brideHindi} संग {couple.groomHindi}
-        </p>
-
-        <p className="mt-1 font-display text-2xl tracking-[0.16em] text-pine uppercase">
+        <p className="mt-5 font-display text-2xl tracking-[0.16em] text-pine uppercase">
           {couple.brideShort} <span className="text-gold">&</span> {couple.groomShort}
         </p>
         <div className="mx-auto mt-4 w-24 gold-rule" />
 
-        <p className="mt-5 font-hindi text-sm text-ink/90 font-medium">
-          ॥ दर्शनाभिलाषी: चन्दन एवं रंगवानी परिवार ॥
-        </p>
-        <p className="mt-1 text-xs text-ink/75">
+        <p className="mt-5 text-sm text-ink/80 font-serif italic">
           With warmest regards &amp; love from Chandan &amp; Rangwani Families
         </p>
 

@@ -91,9 +91,9 @@ export function TheRitualDiya({ onLit }: TheRitualDiyaProps) {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-hindi text-base tracking-[0.2em] text-amber-200"
+          className="text-xs tracking-[0.3em] text-amber-200 uppercase font-medium"
         >
-          ॥ पवित्र दीप प्रज्वलन ॥
+          Auspicious Flame of Blessings
         </motion.p>
         
         <motion.h2
@@ -219,9 +219,6 @@ export function TheRitualDiya({ onLit }: TheRitualDiyaProps) {
               <p className="font-display text-lg italic text-amber-100/90">
                 Press and hold the wick to offer a light.
               </p>
-              <p className="font-hindi text-xs tracking-wider text-amber-200/75">
-                दीपक प्रज्वलित करने के लिए बत्ती को दबाकर रखें
-              </p>
               <p className="text-[0.65rem] tracking-[0.35em] text-amber-300/80 uppercase">
                 {isHolding ? `LIGHTING... ${progress}%` : "HOLD FOR ONE BREATH"}
               </p>
@@ -235,7 +232,7 @@ export function TheRitualDiya({ onLit }: TheRitualDiyaProps) {
             >
               <div className="flex items-center justify-center gap-2 text-amber-300">
                 <Flame className="size-5 text-amber-400" />
-                <span className="font-hindi text-base font-semibold">दीप प्रज्वलित हुआ • मंगल हो</span>
+                <span className="font-display text-base font-semibold tracking-wider uppercase">The Sacred Diya is Lit</span>
                 <Flame className="size-5 text-amber-400" />
               </div>
               <p className="font-display text-sm text-amber-100">
